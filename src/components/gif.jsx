@@ -7,7 +7,15 @@ class Gif extends Component {
     }
   }
 
+  shouldComponentUpdate(nextProps, nextState) {
+    return nextProps.id !== this.props.id;
+  }
+
   render() {
+    if (!this.props.id) {
+      return null;
+    }
+
     const src=`https://media2.giphy.com/media/${this.props.id}/200w.gif`;
     return(
       <img src={src} className="gif" onClick={this.handleClick} />

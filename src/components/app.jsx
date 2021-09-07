@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import SearchBar from './search_bar.jsx';
-import Gif from './gif.jsx';
-import GifList from './gif_list.jsx';
 import giphy from 'giphy-api';
+import SearchBar from './search_bar';
+import Gif from './gif';
+import GifList from './gif_list';
 
 
 class App extends Component {
@@ -11,8 +11,8 @@ class App extends Component {
 
     this.state = {
       gifs: [],
-      selectedGifId: "WsWuvZCICpsXPoYOM2/200w.webp?cid=ecf05e47bccpa8b9nuz3ld3kxm3gm34n922teu3vu69fpr11&rid=200w.webp&ct=g"
-    }
+      selectedGifId: null
+    };
 
     this.selectGif = this.selectGif.bind(this);
   }
