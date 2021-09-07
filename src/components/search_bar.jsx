@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 class SearchBar extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
 
     this.state = {
       term: ""
-    }
+    };
   }
 
   handleChange = (event) => {
@@ -16,12 +16,13 @@ class SearchBar extends Component {
     this.props.search(event.target.value);
   }
 
-  render(){
+  render() {
     return (
-      <input 
+      <input
         type="text"
         className="form-search form-control"
-        onChange={this.handleChange} />
+        onChange={this.handleChange}
+      />
     );
   }
 }
